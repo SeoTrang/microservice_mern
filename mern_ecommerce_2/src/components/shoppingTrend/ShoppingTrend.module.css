@@ -1,0 +1,81 @@
+.shopping_trend_cards{
+    padding: 20px !important;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fcbca4 !important;
+    border-radius: 5px;
+    background-color: transparent;
+   
+}
+.shopping_trend_card{
+    
+    
+    background-color: #ffffff;
+    width: 250px;
+    /* height: 250px; */
+
+    /* background-color: red; */
+   
+    padding: 15px;
+    border-radius: 10px;
+
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+.div_img{
+    width: 100%;
+    height: 80%;
+
+
+}
+
+.img{
+    line-height: 80%;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 15px;
+    border-radius: 5px;
+
+    /* position: relative; */
+}
+
+
+
+.short_description{
+    margin-top: 15px;
+    width: 100%;
+    height: 20%;
+}
+
+
+
+.product_name{
+    
+    font-weight: 500;
+ 
+}
+
+/* a{
+    color: #e94560;
+
+} */
+
+.link_product{
+    color: #e94560;
+}
+
+.visit{
+    color: rgb(82, 82, 187);
+    cursor: pointer;
+}
+
+
+

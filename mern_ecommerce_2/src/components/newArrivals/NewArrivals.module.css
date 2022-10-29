@@ -1,0 +1,59 @@
+.new_arrivals_cards{
+    padding: 20px !important;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff !important;
+    border-radius: 5px;
+    background-color: transparent;
+   
+}
+.new_arrivals_card{
+    
+    
+
+    width: 180px;
+    /* height: 250px; */
+
+    /* background-color: red; */
+   
+    padding: 10px;
+    border-radius: 5px;
+
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+}
+
+
+
+.img{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 15px;
+    border-radius: 5px;
+
+    /* position: relative; */
+}
+
+
+
+
+
+
+.product_name{
+    
+    font-weight: 500;
+    color: #e94560;
+}
+
+
+
+
+
+.product_price{
+    margin-top: 7px;
+    color: #e94560;
+}
