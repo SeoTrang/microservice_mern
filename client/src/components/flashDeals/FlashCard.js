@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState , useEffect} from 'react'
 
 import { Link } from 'react-router-dom';
 
@@ -11,6 +11,7 @@ import Slider from "react-slick";
 
 
 import FlashData from './FlashData'
+import products_api from '../../apis/products_api';
 
 // console.log(FlashData);
 
@@ -24,6 +25,26 @@ const FlashCard = () => {
       slidesToScroll: 1
     };
 
+
+
+  const [flashCardData,setFlashCardData] = useState([])
+
+  useEffect(()=>{
+    async function getFlashProducts() {
+      const listProducts = await products_api.get_flash_products()
+      if(listProducts){
+          // console.log("__hello");
+          await setFlashCardData(listProducts)
+          console.log(flashCardData);
+          
+      }else{
+          console.log('none');
+      }
+    }
+
+    getFlashProducts()
+  },[])
+
   
   return (
     <>
@@ -33,17 +54,17 @@ const FlashCard = () => {
           <div className='cards-product'>
 
               <Slider {...settings}>
-              {FlashData.map((value,index)=>{
+              {flashCardData.map((value,index)=>{
                 return (
               
-                    <Link to={"/detail/" + index} className='card-product' key={index}>
+                    <Link to={"/detail/" + value.slug} className='card-product' key={index}>
                     <img src={value.img} alt='' />
                     <div className='short-description'>
                       <div className='product-name'>
                         <a href=''>{value.name}</a>
                       </div>
                       <div className='old-price'>{value.price}</div>
-                      <div className='product-price'>44.990.000₫</div>
+                      <div className='product-price'>{value.price}</div>
                       <div className='product-action c_flex'>
                         <i class="fa-regular fa-heart like"></i>
                         <i class="fa-solid fa-plus add-product"></i>

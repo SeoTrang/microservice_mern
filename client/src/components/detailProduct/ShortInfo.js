@@ -1,20 +1,68 @@
-import React from 'react'
+import React, {useState,useEffect} from 'react'
+import { useParams } from 'react-router-dom';
+import products_api from '../../apis/products_api';
 
-const ShortInfo = () => {
+const ShortInfo = (props) => {
+  // console.log('test');
+  // console.log(props.data[0]);
+  // let product = props.data[0];
+  // console.log(product.name);
+  // const [data,setData] = useState()
+  // useEffect(()=>{
+
+  //   setData(props)
+  //     console.log("ee");
+  //     console.log(data);
+  //   // function test(){
+      
+  //   //   setData(product)
+  //   //   console.log("ee");
+  //   //   console.log(data);
+  //   // }
+
+  //   // test()
+  // },[])
+    
+  const [listData,setListData] = useState([])
+
+  let { id } = useParams();
+  console.log(id);
+
+  useEffect(()=>{
+    async function getdata() {
+      // console.log("hello: "+id);
+      const listProducts = await products_api.get_1_product(id)
+      if(listProducts){
+        // console.log(listProducts);
+          // console.log("__hello");
+          await setListData(listProducts)
+          // console.log(listData);
+          
+      }else{
+          console.log('none');
+      }
+    }
+
+    getdata()
+  },[])
+
   return (
-    <div className='short_info'>
+    <>
+    {listData.map((data,index)=>{
+      return (
+        <div className='short_info'>
         <div className='name_product'>
-            <span>iPhone 13 Pro Max 128GB</span>
+            <span>{data.name}</span>
 
         </div>
         <div className='brand'>
           <span className='title'>Nhãn hiệu : </span>
-          <span className='ml_20'>iPhone</span>
+          <span className='ml_20'></span>
 
         </div>
         <div className='price'>
-          <span className='old_price'>33.990.000₫</span>
-          <span className='current_price'>27.990.000₫</span>
+          <span className='old_price'>{data.price}₫</span>
+          <span className='current_price'>{data.price}₫</span>
           
         </div>
 
@@ -79,6 +127,14 @@ const ShortInfo = () => {
             </div>
           </div>
     </div>
+
+      )
+    })}
+    </>
+ 
+
+
+ 
   )
 }
 

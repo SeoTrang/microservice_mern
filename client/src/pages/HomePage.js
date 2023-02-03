@@ -20,7 +20,7 @@ function HomePage(){
         <NewArrivals/>
         <ShoppingTrend/>
         <ProductHome/>
-        <ProductHome/>
+        {/* <ProductHome/> */}
         <TopCategories/>
         <MoreForYou/>
         <Slogan/>

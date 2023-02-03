@@ -37,10 +37,10 @@ const Sidebar = () => {
           
        
           
-            <Link to={'/admin/add-category'} className={'nav-sidebar'}>
+            {/* <Link to={'/admin/add-category'} className={'nav-sidebar'}>
             <i class="fa-solid fa-plus"></i>
             <span className='ml-20'>Thêm danh mục</span>
-          </Link>
+          </Link> */}
           
 
           

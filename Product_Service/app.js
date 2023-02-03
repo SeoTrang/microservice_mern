@@ -6,6 +6,7 @@ const bodyParser = require('body-parser')
 
 const route = require('./routes')
 
+const db = require('./config/db')
 
 
 const port = 7002
@@ -16,6 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
+db.connect()
 
 app.use('/',route)
 

@@ -519,18 +519,23 @@ input, button{
     box-shadow: 5px 5px 5px #ccc;
     border-radius: 5px; */
 }
+
+.slick-track{
+    height: 470px;
+   
+}
 .cards-product .card-product{
     
     box-shadow: 1px 5px 5px #ccc;
-    width: 230px !important;
-    /* height: 450px; */
+    width: 180px !important;
+    height: 400px;
     background-color: #ffffff !important;
     /* background-color: red; */
     margin-top: 20px;
     padding: 10px;
     border-radius: 5px;
 
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     text-decoration: none;
     color: black;
@@ -539,7 +544,7 @@ input, button{
 
 
 .cards-product .card-product img{
-    width: 100%;
+    width: 160px;
     height: auto;
     border-radius: 5px;
     margin-top: 15px;
@@ -755,15 +760,15 @@ input, button{
 
 .l-card-product{
     box-shadow: 1px 5px 5px #ccc;
-    width: 250px !important;
-    height: 450px;
+    width: 180px !important;
+    height: 400px;
     background-color: #ffffff !important;
     /* background-color: red; */
     margin-top: 20px;
     padding: 10px;
     border-radius: 5px;
 
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     text-decoration: none;
     color: black;
@@ -953,7 +958,7 @@ input, button{
 .detail .short_info{
     width: 50%;
     margin-top: 50px;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .detail .name_product{
@@ -1002,7 +1007,7 @@ input, button{
 
 .detail .color{
     
-    margin: 0 10px;
+    margin: 0 5px;
     cursor: pointer;
     border: 1px solid #888;
     padding: 10px;
@@ -1096,7 +1101,7 @@ input, button{
 }
 
 .detail .product_action button{
-    width: 300px;
+    width: 230px;
     height: 50px;
     border-radius: 3px;
     border: 1px solid rgb(233, 69, 96);
@@ -1174,15 +1179,26 @@ input, button{
     min-height: 600px;
 }
 
+/* box-shadow:  20px 20px 60px #d9d9d9,
+                -20px -20px 60px #ffffff; */
+
 .my-sidebar{
-    width: 100%;
-    box-shadow: rgb(43 52 69 / 10%) 0 4px 16px;
+    /* width: 100%;
+    box-shadow: 20px 20px 60px #d9d9d9,
+                -20px -20px 60px #ffffff;
     padding: 15px 0;
-    border-radius: 5px;
+    border-radius: 20px;
     margin-top: 5px;
     padding: 22px;
     overflow-y: scroll;
-    font-size: 16px;
+    font-size: 16px; */
+    overflow-y: scroll;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: -20px 20px 60px #d9d9d9,
+                20px -20px 60px #ffffff;
+
+    
 }
 
 .my-sidebar .item-sidebar{
@@ -1339,4 +1355,130 @@ input, button{
     color: #ffffff;
     font-size: 20px;
     border-radius: 10px;
+}
+
+
+
+/*=========================== categories admin */
+
+
+
+.admin-content .view-categories{
+    margin-top: 20px;
+    width: 100%;
+    max-height: 500px;
+    overflow-y: scroll;
+
+    padding:20px;
+    border-radius: 22px;
+    background: #ffffff;
+    
+    box-shadow:  20px 20px 60px #d9d9d9,
+                -20px -20px 60px #ffffff;
+}
+
+.admin-content .view-categories Table{
+    width: 100%;
+    /* text-align: start; */
+    
+    
+}
+
+.admin-content .view-categories Table th{
+    text-align: start;
+}
+
+.admin-content .view-categories Table tbody{
+    text-align: start;
+}
+
+.admin-content .view-categories tr{
+    height: 50px;
+    margin:20px;
+    /* background: #ffffff;
+    box-shadow:  20px 20px 60px #d9d9d9,
+                -20px -20px 60px #ffffff; */
+}
+
+
+.admin-content .view-categories i{
+    cursor: pointer;
+    color: #0F3460;
+}
+
+.admin-content .view-categories .icon-delete{
+    margin-left: 40%;
+    color: #d75b6f;
+    
+}
+
+.admin-content .add-new-category{
+    margin-top: 50px;
+    width: 100%;
+
+}
+
+.admin-content .input-new-category{
+    width: 100%;
+    margin: 20px 0;
+    border: none;
+    border-radius: 15px;
+    padding: 25px;
+    background-color: #ffffff;
+    box-shadow: 20px 20px 60px #d9d9d9,
+                -20px -20px 60px #ffffff;
+    font-size: medium;
+    font-weight: bold;
+    
+    color: #d75b6f;
+    /* max-width: 200px; */
+}
+
+.admin-content .input-new-category::placeholder{
+    color: #d75b70ba;
+}
+
+.admin-content .add-new-category .input-file{
+    
+    border: 1px solid #ccc;
+    height: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    width: 250px;
+    min-height: 250px;
+    margin: 20px auto;
+}
+
+
+
+.admin-content .input-new-category:focus{
+    outline-color: white;
+    /* border: 1px solid #d75b6f; */
+}
+
+.admin-content .add-new-category .btn-submit{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: #090909;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #ffffff;
+    border: 1px solid #e8e8e8;
+    transition: all .3s;
+    box-shadow: 6px 6px 12px #c5c5c5,
+                -6px -6px 12px #ffffff;
+    cursor: pointer;
+}
+
+.admin-content .add-new-category .btn-submit:hover{
+    border: 1px solid white;
+    background-color: #d75b6f;
+    transition: 0.3s;
+    border: none;
+    color: #ffffff;
 }

@@ -24,6 +24,7 @@ import ProductAdmin from '../components/admin/products/ProductAdmin';
 import AddNewProduct from '../components/admin/products/AddNewProduct';
 import Login from '../components/auth/login';
 import Regsiter from '../components/auth/regsiter';
+import CategoriesAdmin from '../components/admin/category/CategoriesAdmin';
 
 
 
@@ -77,6 +78,8 @@ function RoutesWeb() {
 
                         <Route path='/admin/products' element={<ProductAdmin/>}></Route>
                         <Route path='/admin/add-new-product' element={<AddNewProduct/>}></Route>
+                        <Route path='/admin/categories' element= {<CategoriesAdmin/>}></Route>
+
                 </Routes>
                 </div>
               <Footer/>

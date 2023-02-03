@@ -1,5 +1,6 @@
 User_Service/node_modules/
 Product_Service/node_modules/
+API_GetWay_Service/node_modules/
 Images_Service/node_modules/
+
 client/node_modules/
-Cart_Service/node_modules/
